@@ -1,0 +1,197 @@
+body{
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    background-color: #EEC1D4;
+}
+
+nav{
+    background-color: #F2F2F2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.nav_img_logo{
+    height: 100px;
+}
+
+.nav_img_usuario{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: #5697E4;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #495F9E;
+    transition: 0.2s;
+}
+
+.dv_espacamento{
+    background-color: #F2F2F2;
+    width: 1000px;
+    margin: auto;
+}
+
+.dv_agrupamento_de_nome_e_imagem{
+    display: flex;
+    padding-left: 2%;
+    padding-top: 2%;
+    margin-top: 2%;
+    height: fit-content;
+    color: #F2F2F2;
+    background-color: #5697E4;
+}
+
+.dv_agrupamento_de_nome_e_imagem_opcoes{
+    display: flex;
+    align-items: center;
+    margin-left: 45%;
+    margin-top: 2%;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.dv_agrupamento_de_nome_e_imagem_opcoes h5{
+    border-bottom: 2px solid #F2F2F2;
+    border-radius: 2px;
+}
+
+.dv_agrupamento_de_nome_e_imagem a{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color:#F2F2F2;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 25%;
+    width: fit-content;
+}
+
+.dv_agrupamento_de_nome_e_imagem a:hover{
+    border-bottom: 1px solid #F2F2F2;
+    border-width: 2px;
+}
+.dv_agrupamento_de_nome_e_imagem h2{
+    margin-left: 3%;
+}
+.dv_agrupamento_de_nome_e_imagem img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin-bottom: 2%;
+    background-color: #F2F2F2;
+}
+
+.dv_pai_descicao input{
+    background-color: #F2F2F2;
+    border: 1px solid #495F9E;
+    border-radius: 20px;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin-top: 12%;
+}
+
+.dv_pai_informacoes input{
+    background-color: #F2F2F2;
+    border: 1px solid #495F9E;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.dv_pai_informacoes{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.icons_social_media button{
+    border: none;
+    background-color: transparent;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.icons_social_media img{
+    height: 35px;
+    width: 35px;
+}
+
+.dv_pai_definir_direcao_dos_objetos{
+    display: flex;
+    justify-content: space-around;
+}
+
+#dv_preferencias_das_babas input{
+    background-color: #EEC1D4;
+    color: #EEC1D4;
+    height: 15px;
+    width: 15px;
+    display: flex;
+}
+
+.inpts_preferencias_alinhamento{
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.rodape{
+    background-color: #495F9E;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+    position: relative;
+    bottom: 0;
+    margin-top: 10%;
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-direitos{
+    width: calc(100% - 20px);
+    background-color:#eec1d4;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+.logoFooter{
+    height: 100px;
+    margin-left: 10px;
+}

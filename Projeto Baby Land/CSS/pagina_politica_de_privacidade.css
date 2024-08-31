@@ -1,0 +1,158 @@
+body{
+    margin: auto;
+}
+nav{
+    background-color: #F2F2F2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    justify-content: space-around;
+}
+
+.nav_img_logo{
+    height: 100px;
+}
+
+.nav_img_usuario{
+    height: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: #5697E4;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #495F9E;
+    transition: 0.2s;
+}
+body{
+    background-color: #F2E4EA;
+}
+
+.escolha_de_termos_ou_politica{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #495F9E;
+    border-radius: 50px;
+    width: fit-content;
+    margin: auto;
+}
+
+.escolha_de_termos_ou_politica a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.escolha_de_termos_ou_politica_termos {
+    padding: 15px;
+    color: #495F9E;
+    font-weight: bold;
+}
+
+.escolha_de_termos_ou_politica_politica{
+    background-color: #495F9E;
+    padding: 15px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #F2F2F2;
+    font-weight: bold;
+}
+
+.escolha_de_termos_ou_politica_termos:hover{
+    background-color: #495F9E;
+    color: #F2F2F2;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.documento_politica_de_privacidade{
+    background-color: #F2F2F2;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin: 3%;
+    font-family: "Poppins", sans-serif;
+    color: #495F9E;
+}
+.documento_politica_de_privacidade h2{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-weight: 40px;
+}
+
+.documento_politica_de_privacidade h3{
+    margin-top: 70px;
+    font-weight: 36px;
+}
+
+.documento_politica_de_privacidade p{
+    color: #000000;
+    width: 95%;
+    margin-left: 5px;
+    padding-top: 25px;
+    font-weight: 24px;
+}
+
+.lista_nao_ordenada_para_registro_de_data{
+    font-weight: bold;
+}
+
+.lista_do_documento{
+    color: #000000;
+}
+
+.rodape{
+    background-color: #495F9E;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+    position: relative;
+    bottom: 0;
+    margin-top: 10%;
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-direitos{
+    width: calc(100% - 20px);
+    background-color:#eec1d4;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+.logoFooter{
+    height: 100px;
+    margin-left: 10px;
+}

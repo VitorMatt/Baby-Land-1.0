@@ -1,0 +1,208 @@
+body{
+    margin: auto;
+    background-color: #F2E4EA;
+    font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+
+nav{
+    background-color: #F2F2F2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.nav_img_logo{
+    height: 100px;
+}
+
+.nav_img_usuario{
+    height: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: #5697E4;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #495F9E;
+    transition: 0.2s;
+}
+
+/* <<<<<< >>>>>>*/
+
+.nomeBlog{
+    margin-bottom: 7%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #5697E4;
+    color: white;
+    padding: 0.01%;
+    font-size: 150%;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    text-align:justify;
+    border: 5px solid white;
+    box-shadow: 0 0 3px rgba(0,0,0.5);
+    margin: 1%;
+}
+
+.saudebirra{
+    display: flex;
+    flex-direction: row;
+    text-align:justify;
+    margin: 1%;
+    justify-content: space-between;
+}
+
+.ImagemPrototipo{
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+    padding: 2%;
+    display: flex;
+    margin-top: 0%;
+}
+
+.divMenor{
+   background-color: #EFA9BA;
+   display: flex;
+   flex-direction: column; 
+   border-radius: 2%;
+   padding: 1%;
+   margin: 2%;
+}
+
+b{
+    font-size: 200%;
+    color:white;
+}
+p{
+    font-size: 115%;
+    margin-right: 10%;
+}
+
+.subtitulo{
+    font-size: 130%;
+    color:white;
+}
+ 
+.saude{
+
+    margin-left: -2%;
+    width: 80%;
+    padding: 3%;
+}
+
+.boxSaude{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    padding: 2%;
+    width: 50%;
+    margin: 1%;
+    border: 5px solid white;
+    box-shadow: 0 0 3px rgba(0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.7%;
+}
+
+.divsaude{
+    background-color: #EFA9BA;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 2%;
+    padding: 1%;
+    width: 80%;  
+}
+
+.birra{ 
+    margin-left: -2%;
+    width: 80%;
+    padding: 3%;
+}
+
+.boxBirra{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    padding: 2%;
+    width: 50%;
+    margin: 1%;
+    border: 5px solid white;
+    box-shadow: 0 0 3px rgba(0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.7%;
+}
+
+.divbirra{
+    background-color: #EFA9BA;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 2%;
+    padding: 1%;
+    width: 80%; 
+}
+
+/*FOOTER*/
+
+.rodape{
+    background-color: #495F9E;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+    position: relative;
+    bottom: 0;
+    margin-top: 10%;
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-direitos{
+    width: calc(100% - 20px);
+    background-color:#eec1d4;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+.logoFooter{
+    height: 100px;
+    margin-left: 10px;
+}
