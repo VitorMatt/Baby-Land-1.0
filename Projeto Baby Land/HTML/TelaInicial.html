@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="7v5y7isN9P4JwU8ft41UkqNuG57AkNrE0R8TMveoR5Q" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../fotos/LogoNavegador.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/telainicial.css">
     <title>Home</title>
 </head>
 
-<body onload="carrossel(), mostraBabas()">
+<body onload="carrossel(), mostraBabas(), mostraFotoPerfil(), mostraCadastrarse()">
 
 
 
@@ -24,8 +24,7 @@
         <a href="servicos.html">Serviços</a>
         <a href="pagina_sobre_nos.html">Sobre Nós</a>
         <a href="blogAtualizado.html">Blog</a>
-        <a href="TelaInicial.html"><img src="../fotos/iconePerfil.png" alt="Imagem usuario.png"
-                class="nav_img_usuario"></a>
+        <div id="foto-perfil"></div>
     </nav>
 
 
@@ -38,7 +37,7 @@
     <div class="carrossel_ajuste">
 
         <div class="carrossel">
-            <div class="container" id="img">
+            <div class="containerA" id="img">
                 <a href="servicos.html"><img src="../fotos/carrosel 1.jpeg" alt=""></a>
                 <a href="blogAtualizado.html"><img src="../fotos/carrosel 2.jpeg" alt=""></a>
                 <a href="servicos.html"><img src="../fotos/carrosel 3.jpeg" alt=""></a>
@@ -60,7 +59,7 @@
     <div class="container">
 
         <span>
-            <h2> Babás Destaques </h2>
+            <h2 class="destaques"> Babás Destaques </h2>
         </span>
 
         <div class="perfis" id="perfisBabas">
@@ -78,7 +77,7 @@
     <!--CADASTRO-->
 
 
-    <div class="cadastro">
+    <div class="cadastro" id="cadastro">
 
 
         <button onclick="ecolhaResponsavelOuBaba()" class="LoginCadastro">Cadastrar-se</button>

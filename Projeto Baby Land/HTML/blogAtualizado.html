@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../fotos/LogoNavegador.ico" type="image/x-icon">
     <title>Blog</title>
 </head>
-<body>
+<body onload="mostraFotoPerfil()">
     <nav>
         <a href="TelaInicial.html">
             <img src="../fotos/logoHorizontal.png" alt="Imagem logo.png" class="nav_img_logo">
@@ -17,8 +17,7 @@
         <a href="servicos.html">Serviços</a>
         <a href="pagina_sobre_nos.html">Sobre Nós</a>
         <a href="blogAtualizado.html">Blog</a>
-        <a href="TelaInicial.html"><img src="../fotos/iconePerfil.png" alt="Imagem usuario.png"
-                class="nav_img_usuario"></a>
+        <div id="foto-perfil"></div>
     </nav>
 
 
@@ -136,6 +135,7 @@
     </div>
     <p class="rodape-direitos">Copyright © 2024 – Todos os Direitos Reservados.</p>
 </footer>
+<script src="../JS/script.js"></script>
 
 </body>
 </html>

@@ -40,6 +40,7 @@ nav a:hover{
     background-color: #F2F2F2;
     width: 1000px;
     margin: auto;
+    border-radius: 0 20px 20px 20px;
 }
 
 .dv_agrupamento_de_nome_e_imagem{
@@ -132,6 +133,27 @@ nav a:hover{
     justify-content: space-around;
 }
 
+.sair-button {
+
+    background-color: #9e2a2b;
+    width: 100px;
+    height: 30px;
+    color: #F2F2F2;
+    border: 1px solid #9e2a2b;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+}
+
+.sair-button:hover {
+
+    background-color: red;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
 #dv_preferencias_das_babas input{
     background-color: #EEC1D4;
     color: #EEC1D4;
@@ -141,11 +163,21 @@ nav a:hover{
 }
 
 .inpts_preferencias_alinhamento{
-    display: inline-flex;
-    flex-direction: row;
+    display: block;
     width: 100%;
     margin-bottom: 10px;
     font-size: 13px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.inpts_preferencias_alinhamento label {
+
+    color: #495F9E;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
 }
 
 .rodape{

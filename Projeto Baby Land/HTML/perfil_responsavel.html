@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/perfil_responsavel.css">
     <title>Perfil</title>
 </head>
-<body onload="on_load_imagem_de_perfil_responsavel()">
+<body onload="on_load_imagem_de_perfil_responsavel(), mostraFotoPerfil()">
 
     <!--NAVBAR-->
     <nav>
@@ -19,8 +19,7 @@
         <a href="servicos.html">Serviços</a>
         <a href="pagina_sobre_nos.html">Sobre Nós</a>
         <a href="blogAtualizado.html">Blog</a>
-        <a href="TelaInicial.html"><img src="../fotos/iconePerfil.png" alt="Imagem usuario.png"
-                class="nav_img_usuario"></a>
+        <div id="foto-perfil"></div>
     </nav>
 
 
@@ -60,6 +59,7 @@
                                 <button onclick="ir_ao_instagram_responsavel()"><img src="../fotos/instagram.png" alt="instagram"></button>
                                 <button onclick="ir_ao_facebook_responsavel()"><img src="../fotos/facebook.png" alt="facebook"></button>
                             </div>
+                            <button onclick="sairConta()" class="sair-button">Sair</button>
                         </div>
 
                     </div>
@@ -108,7 +108,7 @@
             </div>
 
         </div>
-        <p class="rodape-direitos">Copyright © 2024 – Todos os Direitos Reservados.</p>
+        <p class="rodape-direitos">Copyright © 2024 - Todos os Direitos Reservados.</p>
     </footer>
 
     <script src="../JS/script.js"></script>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/perfil_baba.css">
     <title>Perfil</title>
 </head>
-<body onload="on_load_imagem_de_perfil_baba()">
+<body onload="on_load_imagem_de_perfil_baba(), mostraFotoPerfil()">
 
     <!--NAVBAR-->
     <nav>
@@ -19,8 +19,7 @@
         <a href="servicos.html">Serviços</a>
         <a href="pagina_sobre_nos.html">Sobre Nós</a>
         <a href="blogAtualizado.html">Blog</a>
-        <a href="TelaInicial.html"><img src="../fotos/iconePerfil.png" alt="Imagem usuario.png"
-                class="nav_img_usuario"></a>
+        <div id="foto-perfil"></div>
     </nav>
 
     <div class="dv_espacamento">
@@ -63,6 +62,7 @@
                                 <button onclick="ir_ao_instagram_baba()"><img src="../fotos/instagram.png" alt="instagram"></button>
                                 <button onclick="ir_ao_facebook_baba()"><img src="../fotos/facebook.png" alt="facebook"></button>
                             </div>
+                            <button onclick="sairConta()" class="sair-button">Sair</button>
                         </div>
                         </div>
 

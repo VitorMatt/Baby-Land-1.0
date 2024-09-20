@@ -605,6 +605,17 @@ function excluirConta(){
   }
 }
 
+function sairConta() {
+
+  let user = JSON.parse(localStorage.getItem('User Logado'));
+  
+  window.location.href='../HTML/TelaInicial.html';
+
+  user = null;
+
+  localStorage.setItem('User Logado', JSON.stringify(user));
+}
+
 // Função para mostrar os perfis das babás;
 function mostraServicos(){
 
@@ -616,7 +627,7 @@ function mostraServicos(){
     const divPerfil = document.createElement('div');
     divPerfil.className = 'divPerfil';
     divPerfil.innerHTML = `
-            <img src="../fotos/ip_2.png">
+            <img src=${perfil.imagem_de_perfil}>
             <h2>${perfil.nome}</h2>
             <h3>${perfil.idade}</h3>
             <h3>Preferência(s):</h3>
@@ -682,8 +693,12 @@ function mudar_imagem_um_baba() {
       localStorage.setItem(`User Logado`, JSON.stringify(pegar_object[i]));
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_1.png`;
-      element_nav_img_usuario.src = `../fotos/ip_1.png`;
+      element_imagem_de_usuario = `../fotos/ip_1.png`;
+      element_nav_img_usuario = `../fotos/ip_1.png`;
+
+      let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+      element_opcao_de_imagens.innerHTML = '';
     }
   }
   window.onload();
@@ -709,8 +724,11 @@ function mudar_imagem_dois_baba() {
       localStorage.setItem(`User Logado`, JSON.stringify(pegar_object[i]));
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_2.png`;
-      element_nav_img_usuario.src = `../fotos/ip_2.png`;
+      element_imagem_de_usuario = `../fotos/ip_2.png`;
+      element_nav_img_usuario = `../fotos/ip_2.png`;
+      let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+      element_opcao_de_imagens.innerHTML = '';
     }
   }
   window.onload();
@@ -736,8 +754,11 @@ function mudar_imagem_tres_baba() {
       localStorage.setItem(`User Logado`, JSON.stringify(pegar_object[i]));
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_3.png`;
-      element_nav_img_usuario.src = `../fotos/ip_3.png`;
+      element_imagem_de_usuario = `../fotos/ip_3.png`;
+      element_nav_img_usuario = `../fotos/ip_3.png`;
+      let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+      element_opcao_de_imagens.innerHTML = '';
     }
   }
   window.onload();
@@ -763,8 +784,11 @@ function mudar_imagem_quatro_baba() {
       localStorage.setItem(`User Logado`, JSON.stringify(pegar_object[i]));
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_4.png`;
-      element_nav_img_usuario.src = `../fotos/ip_4.png`;
+      element_imagem_de_usuario = `../fotos/ip_4.png`;
+      element_nav_img_usuario = `../fotos/ip_4.png`;
+      let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+      element_opcao_de_imagens.innerHTML = '';
     }
   }
   window.onload();
@@ -874,7 +898,6 @@ function on_load_imagem_de_perfil_baba() {
   let element_hdois_nome_de_usuario = document.getElementById(
     `hdois_nome_de_usuario`
   );
-  let element_nav_img_usuario = document.getElementById(`nav_img_usuario`);
   let element_imagem_de_usuario = document.getElementById(`imagem_de_usuario`);
   let element_nova_descricao_de_perfil = document.getElementById(
     `nova_descricao_de_perfil`
@@ -886,10 +909,6 @@ function on_load_imagem_de_perfil_baba() {
   let element_dv_preferencias_das_babas = document.getElementById(
     `dv_preferencias_das_babas`
   );
-  let element_preferencias_babas_a;
-  let element_preferencias_babas_b;
-  let element_preferencias_babas_c;
-  let element_preferencias_babas_d;
   let validacao = false;
   let validacao_b = false;
 
@@ -899,62 +918,23 @@ function on_load_imagem_de_perfil_baba() {
   element_inpt_nome_de_usuario_exibir_perfil.value = user_logado.nome;
   element_inpt_email_de_usuario_exibir_perfil.value = user_logado.email;
   validacao = true;
-  element_dv_preferencias_das_babas.innerHTML = `
+
+  element_dv_preferencias_das_babas.innerHTML = '';
+
+  user_logado.preferencias.forEach((user) => {
+    const divPreferencias = document.createElement('div');
+    divPreferencias.innerHTML = `
             <div class="inpts_preferencias_alinhamento">
                 <div>
-                <label>        
-                <input type="checkbox" readonly id="preferencias_babas_a" onclick="return false;"> 
-                Recém-Nascido
-                </label>
-                </div>
-                <div>
-                <label>        
-                <input type="checkbox" readonly id="preferencias_babas_b" onclick="return false;">
-                Bebes de 1-3 anos
-                </label>
-                </div>
-                <div>
-                <label>        
-                <input type="checkbox" readonly id="preferencias_babas_c" onclick="return false;">
-                Crianças de 4-7 anos
-                </label>
-                </div>
-                <div>
-                <label>        
-                <input type="checkbox" readonly id="preferencias_babas_d" onclick="return false;">
-                Crianças com Necessidades Especiais
-                </label>
+                <label>${user}</label>
                 </div>
             </div>
         `;
+        element_dv_preferencias_das_babas.appendChild(divPreferencias);
+  });
 
-  element_preferencias_babas_a =
-    document.getElementById(`preferencias_babas_a`);
-  element_preferencias_babas_b =
-    document.getElementById(`preferencias_babas_b`);
-  element_preferencias_babas_c =
-    document.getElementById(`preferencias_babas_c`);
-  element_preferencias_babas_d =
-    document.getElementById(`preferencias_babas_d`);
 
-  if (user_logado.preferencias.includes(`Recém-Nascido`)) {
-    element_preferencias_babas_a.checked = true;
-  }
-
-  if (user_logado.preferencias.includes(`Bebes de 1-3 anos`)) {
-    element_preferencias_babas_b.checked = true;
-  }
-
-  if (user_logado.preferencias.includes(`Crianças de 4-7 anos`)) {
-    element_preferencias_babas_c.checked = true;
-  }
-
-  if (
-    user_logado.preferencias.includes(`Crianças com Necessidades Especiais`)
-  ) {
-    element_preferencias_babas_d.checked = true;
-  }
-
+ 
   validacao_b = true;
 }
 
@@ -1281,9 +1261,14 @@ function mudar_imagem_um_responsavel() {
       );
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_1.png`;
+      element_imagem_de_usuario = `../fotos/ip_1.png`;
+      user_logado.imagem_de_perfil = element_imagem_de_usuario;
+        localStorage.setItem('User Logado', JSON.stringify(user_logado));
     }
   }
+  let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+  element_opcao_de_imagens.innerHTML = '';
   window.onload();
 }
 
@@ -1306,9 +1291,14 @@ function mudar_imagem_dois_responsavel() {
       );
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_2.png`;
+      element_imagem_de_usuario = `../fotos/ip_2.png`;
+      user_logado.imagem_de_perfil = element_imagem_de_usuario;
+        localStorage.setItem('User Logado', JSON.stringify(user_logado));
     }
   }
+  let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+  element_opcao_de_imagens.innerHTML = '';
   window.onload();
 }
 
@@ -1331,9 +1321,14 @@ function mudar_imagem_tres_responsavel() {
       );
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_3.png`;
+      element_imagem_de_usuario = `../fotos/ip_3.png`;
+      user_logado.imagem_de_perfil = element_imagem_de_usuario;
+      localStorage.setItem('User Logado', JSON.stringify(user_logado));
     }
   }
+  let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+  element_opcao_de_imagens.innerHTML = '';
   window.onload();
 }
 
@@ -1356,9 +1351,16 @@ function mudar_imagem_quatro_responsavel() {
       );
       validacion = true;
 
-      element_imagem_de_usuario.src = `../fotos/ip_4.png`;
+      element_imagem_de_usuario = `../fotos/ip_4.png`;
+      user_logado.imagem_de_perfil = element_imagem_de_usuario;
+      localStorage.setItem('User Logado', JSON.stringify(user_logado));
     }
+
   }
+
+  let element_opcao_de_imagens = document.getElementById(`opcao_de_imagens`);
+
+  element_opcao_de_imagens.innerHTML = '';
   window.onload();
 }
 
@@ -1729,5 +1731,60 @@ function descricao_de_perfil_baba() {
       );
       validacao = true;
     }
+  }
+}
+
+function mostraFotoPerfil() {
+    
+  let user = JSON.parse(localStorage.getItem('User Logado'));
+  let img = document.getElementById('foto-perfil');
+  const cuidadores = JSON.parse(localStorage.getItem('Cuidadores Cadastrados'));
+  const responsaveis = JSON.parse(localStorage.getItem('Responsáveis Cadastrados'));
+  let perfilUser;
+
+  
+  if (user!=null) {
+
+      if (cuidadores==null && responsaveis==null) {
+  
+          perfilUser = '"../HTML/cadastroPais.html"';
+      } else if (cuidadores!=null && responsaveis==null) {
+  
+          perfilUser = '"../HTML/perfil_baba.html"';
+      } else if (cuidadores==null && responsaveis!=null) {
+  
+          perfilUser = '"../HTML/perfil_responsavel.html"';
+      } else if (cuidadores!=null && responsaveis!=null) {
+    
+          for (i=0; i<cuidadores.length; i++) {
+              
+              if (user.email==cuidadores[i].email) {
+                  
+                  perfilUser = '"../HTML/perfil_baba.html"';
+                  break;
+              };
+          };
+  
+          for (i=0; i<responsaveis.length; i++) {
+              
+              if (user.email==responsaveis[i].email) {
+                  
+                  perfilUser = '"../HTML/perfil_responsavel.html"';
+                  break;
+              };
+          };
+  
+      };
+      
+      img.innerHTML=`
+      <a href=${perfilUser}>
+          <img src=${user.imagem_de_perfil} alt="Imagem usuario" class="nav_img_usuario">
+      </a>`;
+  } else {
+
+      img.innerHTML=`
+      <a href="../HTML/telaLogin.html">
+          <img src="../fotos/ip_1.png" alt="Imagem usuario" class="nav_img_usuario">
+      </a>`;
   }
 }

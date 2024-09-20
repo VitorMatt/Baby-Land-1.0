@@ -8,14 +8,18 @@ body {
     background-color: #f5f5f5;
 }
 
+*:focus {
+    
+    outline: none;
+}
+
 .container {
     display: flex;
     width: 80%;
     max-width: 1200px;
-    height: 90vh;
+    height: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: #f2e4ea;
-
 }
 
 .logo {
@@ -36,7 +40,6 @@ body {
 }
 
 
-
 a {
     align-items: center;
     display: flex;
@@ -49,7 +52,7 @@ a {
 h2 {
     margin-top: 2%;
     font-size: 24px;
-    color: rgb(0, 0, 0);
+    color: #5697E4;
 }
 
 label {
@@ -84,10 +87,95 @@ button:hover {
     display: flex;
    
 }
-.checkbox-ajustes{
+.checkbox-ajustes {
     width: 2%;
     margin-bottom: 10px;
 }
 .criançasComNecessidadesEspeciais{
     margin-bottom: 20px;
+}
+
+.mensagem {
+    
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 900px){
+    
+    .logo img {
+        
+        height: 1%;
+        width: 50%;
+    }
+    
+    .logo {
+        
+        width: 100%;
+        height: 1%;
+    }
+    
+    body {
+        
+        background-color: #f2e4ea;
+        height: fit-content;
+        margin: auto;
+    }
+    
+    .container {
+        
+        height: fit-content;
+        width: 95%;
+        margin-top: 50px;
+        box-shadow: none;
+        align-items: center;
+        display: block;
+        margin-left: 20px;
+    }
+    
+    input {
+        
+        width: 93%;
+        height: 1%;
+    }
+    
+    button {
+        
+        width: 94%;
+        height: 35px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .mensagem {
+        
+        margin-top: 50px;
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .checkbox-ajustes {
+        
+        width: 94%;
+    }
+    
+    a {
+        width: 100%;
+    }
+    
+    label {
+        
+        margin-bottom: 5px;
+    }
+    
+    .checkbox label {
+        
+        margin-left: -160px;
+    }
+    
+    .checkbox input {
+        
+        margin-left: -165px;
+    }
 }
